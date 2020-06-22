@@ -1,0 +1,7 @@
+[
+    {
+        "catagory": "React Native",
+        "title": "OfferupDeals App",
+        "description": "An Android/iOS application backed by an Express server that will automatically notify by push notications if any items were posted on the offical Offerup Website. The inspiration behind this app is many of the posts seen on offerup are scams and offerup doesn't have a way to filter these. I created an algorthim that will auto scrap the data with the posted author information that"
+    }
+]

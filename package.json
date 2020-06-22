@@ -1,0 +1,28 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@svgr/parcel-plugin-svgr": "^5.4.0",
+    "polished": "^3.6.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-spring": "^8.0.27",
+    "styled-components": "^5.1.1",
+    "styled-reset": "^4.1.6"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.38",
+    "@types/react-dom": "^16.9.8",
+    "@types/styled-components": "^5.1.0",
+    "parcel": "^1.12.4",
+    "typescript": "^3.9.5"
+  }
+}
