@@ -20,6 +20,7 @@ declare module "styled-components" {
       extraSmall: string;
       small: string;
       medium: string;
+      mediumLarge: string;
       large: string;
       extraLarge: string;
     };

@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "next dev",
+    "build": "next build && next export",
     "start": "parcel src/index.html"
   },
   "keywords": [],
@@ -11,16 +13,23 @@
   "license": "ISC",
   "dependencies": {
     "@svgr/parcel-plugin-svgr": "^5.4.0",
+    "@svgr/webpack": "^5.4.0",
+    "gray-matter": "^4.0.2",
+    "next": "^9.4.4",
     "polished": "^3.6.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-markdown": "^4.3.1",
     "react-spring": "^8.0.27",
+    "react-syntax-highlighter": "^12.2.1",
     "styled-components": "^5.1.1",
     "styled-reset": "^4.1.6"
   },
   "devDependencies": {
+    "@types/node": "^14.0.13",
     "@types/react": "^16.9.38",
     "@types/react-dom": "^16.9.8",
+    "@types/react-syntax-highlighter": "^11.0.4",
     "@types/styled-components": "^5.1.0",
     "parcel": "^1.12.4",
     "typescript": "^3.9.5"

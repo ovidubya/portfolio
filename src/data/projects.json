@@ -1,7 +1,39 @@
 [
     {
+        "catagory": "React",
+        "title": "Chess Stats",
+        "description": "A simple web app that will compare my Chess.com stats to the Hikaru Nakamura, a world chess champion.",
+        "source": "https://github.com/ovidubya/chess-compare",
+        "live": "https://chess-compare.netlify.app/",
+        "tags": "React, styled-components, Chess API, React Spring"
+    },
+    {
+        "catagory": "React",
+        "title": "Quiz App",
+        "description": "Another one of those quiz apps to test you knowledge on JS and CSS in the theme of Who Wants to Be a Millionaire",
+        "live": "https://another-js-quiz-app.netlify.app/",
+        "source": "https://github.com/ovidubya/quiz-app",
+        "tags": "React, styled-components"
+    },
+    {
         "catagory": "React Native",
         "title": "OfferupDeals App",
-        "description": "An Android/iOS application backed by an Express server that will automatically notify by push notications if any items were posted on the offical Offerup Website. The inspiration behind this app is many of the posts seen on offerup are scams and offerup doesn't have a way to filter these. I created an algorthim that will auto scrap the data with the posted author information that"
+        "description": "An Android/iOS application backed by an Express server that will automatically notify you by push notications if any items were posted on the offical Offerup Website matching your desired filters. This app is more useful than the exisitng push notifcation logic in the current Offerup since this will take into account the users verfication status / year joined / rating / and distance from your current location. Read more on how you can use it to save money here: ",
+        "source": "https://github.com/ovidubya/offerup-deals-server",
+        "tags": "React Native, React, Expo, Express, Push Notifcations, Playwright"
+    },
+    {
+        "catagory": "Chrome API",
+        "title": "Chrome Debugger",
+        "description": "Chrome extention that will allow clients to debug their OpinionLab Widgets on productions sites. It uses to the Chrome API to hook into the chrome's tab background and listen for http requests with Opinonlab Resources. Once it finds a resource, it will run a Regex to determine the contents of the file",
+        "source": "https://github.com/ovidubya/OOoChromExtension",
+        "tags": "HTML, CSS, MaterializeCSS, jQuery, Chrome API"
+    },
+    {
+        "catagory": "Node, Express",
+        "title": "Smart Meter (IoT Device)",
+        "description": "AT&T Launched a new network 2018 called NB-IoT which allows IoT devices to communicate without the overhead of a regualr LTE network. Part of the capstone project was to use this Network to simualte meter reading using a resource constrained device (BG96) and collect the data to a Database and display with a Web application",
+        "source": "https://github.com/TheJordanWine/Interop-Cellular-IoT",
+        "tags": "C, C++, OS-IoT Lib, Node, Express, Mongo, Webdriver.IO"
     }
 ]

@@ -1,20 +1,31 @@
 import * as React from "react";
 import styled from "styled-components";
-import { darken, readableColor } from "polished";
-type ProjectProps = {};
+import { darken } from "polished";
+import { ProjectType } from "../../types/types";
+import { Badge } from "./Badge";
 
-export const Project: React.FC<ProjectProps> = () => {
+type ProjectProps = {
+  project: ProjectType;
+};
+
+export const Project: React.FC<ProjectProps> = ({ project }) => {
   return (
     <Card>
       <CardSection>
-        <CardCatagory>CATEGORY</CardCatagory>
-        <CardTitle>Raclette Blueberry Nextious Level</CardTitle>
-        <CardDescription>
-          Photo booth fam kinfolk cold-pressed sriracha leggings jianbing
-          microdosing tousled waistcoat.
-        </CardDescription>
+        <CardCatagory>{project.catagory}</CardCatagory>
+        <CardTitle>{project.title}</CardTitle>
+        <CardDescription>{project.description}</CardDescription>
 
-        <CardLink href="#">Source</CardLink>
+        <div>
+          {project?.source && <CardLink href={project.source}>Source</CardLink>}{" "}
+          {project?.live && <CardLink href={project.live}>Link</CardLink>}
+        </div>
+
+        <CardTags>
+          {project.tags.split(", ").map((tag) => (
+            <Badge key={tag}>{tag}</Badge>
+          ))}
+        </CardTags>
       </CardSection>
     </Card>
   );
@@ -39,7 +50,13 @@ const Card = styled.div`
 const CardSection = styled.div`
   text-align: center;
   & > * {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+  }
+`;
+
+const CardTags = styled.div`
+  & > span {
+    margin: 4px;
   }
 `;
 
@@ -54,6 +71,8 @@ const CardTitle = styled.h1`
 `;
 
 const CardDescription = styled.p`
+  font-size: ${(props) => props.theme.font.mediumLarge};
+  line-height: 1.5;
   color: ${(props) => props.theme.colors.text};
 `;
 

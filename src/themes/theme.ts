@@ -12,6 +12,7 @@ export const theme = {
     extraSmall: "10px",
     small: "14px",
     medium: "16px",
+    mediumLarge: "20px",
     large: "24px",
     extraLarge: "42px",
   },
