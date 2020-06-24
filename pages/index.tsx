@@ -1,5 +1,13 @@
 import * as React from "react";
-import { Navitem, Button, Project, Badge, Post } from "../src/components";
+import {
+  Navitem,
+  Button,
+  Project,
+  Badge,
+  Post,
+  Input,
+  ContactForm,
+} from "../src/components";
 import styled, { css } from "styled-components";
 import { useRef } from "react";
 import { calcOffset } from "../src/utils/calcOffset";
@@ -54,12 +62,19 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 const Index: React.SFC<IndexProps> = ({ projects, posts }) => {
-  console.log(posts);
   const ProjectsRef = useRef(null);
+  const BlogRef = useRef(null);
 
-  const scrollToProjects = () => {
-    if (ProjectsRef.current) {
-      window.scrollTo(0, calcOffset(ProjectsRef.current) - 150);
+  const scrollTo = (section: string) => {
+    switch (section) {
+      case "projects":
+        window.scrollTo(0, calcOffset(ProjectsRef.current) - 150);
+        break;
+      case "blog":
+        window.scrollTo(0, calcOffset(BlogRef.current));
+        break;
+      default:
+        throw "Wrong section";
     }
   };
 
@@ -72,16 +87,30 @@ const Index: React.SFC<IndexProps> = ({ projects, posts }) => {
           large
           onClick={(e) => {
             e.preventDefault();
-            scrollToProjects();
+            scrollTo("projects");
           }}
           backgroundColor="#27ae60"
         >
-          View my portofolio
+          View Projects
         </Button>
       </AboutMeContainer>
       <Navbar>
-        <Navitem>projects</Navitem>
-        <Navitem>blog</Navitem>
+        <Navitem
+          onClick={(e) => {
+            e.preventDefault();
+            scrollTo("projects");
+          }}
+        >
+          projects
+        </Navitem>
+        <Navitem
+          onClick={(e) => {
+            e.preventDefault();
+            scrollTo("blog");
+          }}
+        >
+          blog
+        </Navitem>
         <Navitem>contact</Navitem>
       </Navbar>
       <Projects>
@@ -97,7 +126,7 @@ const Index: React.SFC<IndexProps> = ({ projects, posts }) => {
             })}
         </ProjectsContainer>
       </Projects>
-      <Blog>
+      <Blog ref={BlogRef}>
         <Headline>Blog</Headline>
         <BlogContainer>
           {posts.length !== 0 &&
@@ -106,20 +135,40 @@ const Index: React.SFC<IndexProps> = ({ projects, posts }) => {
             })}
         </BlogContainer>
       </Blog>
+      <Contact>
+        <Headline>Contact</Headline>
+
+        <ContactForm />
+      </Contact>
     </>
   );
 };
 
 export default Index;
 
+const Contact = styled.section`
+  padding: 20px;
+  @media screen and (min-width: 768px) {
+    width: 700px;
+    margin: 0 auto;
+  }
+`;
+
 const BlogContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: auto;
+  @media screen and (min-width: 768px) {
+    & {
+      grid-template-columns: 1fr;
+    }
+  }
 `;
 
 const Blog = styled.section`
   margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
 `;
 
 const Projects = styled.section`

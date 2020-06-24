@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, ReactElement } from "react";
 import styled from "styled-components";
 
-type NavitemProps = {};
+interface NavitemProps extends React.HTMLAttributes<HTMLLIElement> {}
 
 export const Navitem: React.FC<NavitemProps> = (props) => {
   return (
-    <Item>
+    <Item {...props}>
       <ItemButton href="#">{props.children}</ItemButton>
     </Item>
   );

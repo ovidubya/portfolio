@@ -14,3 +14,10 @@ export type PostType = {
   date: string;
   slug: string;
 };
+
+export type ContactFormType = {
+  formName: string;
+  name: string;
+  email: string;
+  message: string;
+};

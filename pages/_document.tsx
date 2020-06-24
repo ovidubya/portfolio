@@ -36,6 +36,12 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
             rel="stylesheet"
           />
+          <link
+            href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap"
+            rel="stylesheet"
+          />
+          <title>Ovadia Shalom • Software Engineer</title>
+          <link rel="icon" type="image/png" href="/Untitled16.png" />
         </Head>
         <body>
           <Main />

@@ -1,14 +1,15 @@
 import * as React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { readableColor } from "polished";
 
 interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   backgroundColor: string;
   large?: boolean;
+  fullWidth?: boolean;
 }
 
 export const Button = styled.button`
-  display: flex;
+  /* display: flex; */
   padding: ${(props) => (props.large ? "20px 30px" : "15px 25px")};
   border: 0;
   font-size: ${(props) =>
@@ -18,6 +19,12 @@ export const Button = styled.button`
   -webkit-appearance: none;
   -moz-appearance: none;
   background-color: transparent;
+  text-align: center;
+  ${(props) =>
+    props.fullWidth &&
+    css`
+      width: 100%;
+    `}
   border: 1px solid ${(props: ButtonProps) => props.backgroundColor};
   color: ${(props) => readableColor(props.theme.colors.body)};
   &:hover {

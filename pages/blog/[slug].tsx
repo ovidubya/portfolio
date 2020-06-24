@@ -3,13 +3,10 @@ import * as fs from "fs";
 import * as path from "path";
 import ReactMarkdown from "react-markdown";
 import { GetStaticPaths, GetStaticProps } from "next";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import {
-  atomOneLight,
-  atomOneDark,
-} from "react-syntax-highlighter/dist/cjs/styles/hljs";
-import styled, { useTheme } from "styled-components";
 import matter from "gray-matter";
+import { rendererEngine } from "../../src/utils/blogRenderer";
+import styled, { useTheme } from "styled-components";
+import { Navbar, Button } from "../../src/components";
 
 export interface BlogProps {
   slug: string;
@@ -17,32 +14,38 @@ export interface BlogProps {
 
 const Blog: React.SFC<BlogProps> = ({ slug }) => {
   const theme = useTheme();
-
   return (
-    <ReactMarkdown
-      renderers={{
-        paragraph: function ({ children }) {
-          return <StyledParagraph>{children}</StyledParagraph>;
-        },
-        code: function ({ language, value }) {
-          return (
-            <SyntaxHighlighter
-              style={theme.themeType === "dark" ? atomOneLight : atomOneDark}
-              language={language}
-            >
-              {value}
-            </SyntaxHighlighter>
-          );
-        },
-      }}
-      source={slug}
-    />
+    <>
+      <BlogContainer>
+        <Button
+          onClick={() => (location.href = "/")}
+          backgroundColor={theme.colors.pumpkin}
+        >
+          Go back
+        </Button>
+        <ReactMarkdown
+          escapeHtml={false}
+          renderers={rendererEngine}
+          source={slug}
+        />
+      </BlogContainer>
+    </>
   );
 };
 
-const StyledParagraph = styled.p`
-  font-size: ${(props) => props.theme.font.large};
-  margin: 1rem 0;
+const BlogContainer = styled.section`
+  margin: 80px 20px;
+  max-width: 968px;
+  ${Button} {
+    margin-bottom: 10px;
+  }
+  @media screen and (min-width: 768px) {
+    margin: 80px auto;
+  }
+`;
+
+const StyledLink = styled.a`
+  color: ${(props) => props.theme.colors.text};
 `;
 
 export const getStaticPaths: GetStaticPaths = async () => {

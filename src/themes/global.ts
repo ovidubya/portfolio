@@ -21,4 +21,11 @@ export const GlobalStyles = createGlobalStyle`
   a {
     text-decoration: none;
   }
+  
+  code {
+    font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New!important;
+  }
+  p {
+    font-family: 'PT Serif', serif;
+  }
 `;

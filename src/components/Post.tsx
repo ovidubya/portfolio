@@ -33,7 +33,7 @@ const PostLink = styled.a`
 const PostStyled = styled.div`
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid #666;
+  /* border-bottom: 1px solid #666; */
   margin: 20px;
   padding-bottom: 20px;
 
