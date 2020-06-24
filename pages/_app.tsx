@@ -4,6 +4,7 @@ import { GlobalStyles } from "../src/themes/global";
 import { lightTheme, darkTheme } from "../src/themes/theme";
 import { useTheme } from "../src/hooks/useTheme";
 import dynamic from "next/dynamic";
+import Head from "next/head";
 
 const Footer = dynamic(
   //@ts-ignore
@@ -18,6 +19,9 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+        <Head>
+          <title>Ovadia Shalom • Software Engineer</title>
+        </Head>
         <GlobalStyles />
         <ToggleTheme theme={theme} toggleTheme={toggleTheme} />
         <main>

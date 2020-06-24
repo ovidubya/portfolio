@@ -40,8 +40,13 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap"
             rel="stylesheet"
           />
-          <title>Ovadia Shalom • Software Engineer</title>
           <link rel="icon" type="image/png" href="/Untitled16.png" />
+
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-170761872-1"
+          ></script>
+          <script src="/ga.js"></script>
         </Head>
         <body>
           <Main />
