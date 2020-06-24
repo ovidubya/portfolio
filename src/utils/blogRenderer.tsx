@@ -59,7 +59,7 @@ const StyledImage = styled.img`
   align-items: center;
   width: 100%;
   @media screen and (min-width: 768px) {
-    width: 85%;
+    width: 70%;
   }
 `;
 

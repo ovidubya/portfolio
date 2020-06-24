@@ -64,6 +64,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 const Index: React.SFC<IndexProps> = ({ projects, posts }) => {
   const ProjectsRef = useRef(null);
   const BlogRef = useRef(null);
+  const ContactRef = useRef(null);
 
   const scrollTo = (section: string) => {
     switch (section) {
@@ -72,6 +73,9 @@ const Index: React.SFC<IndexProps> = ({ projects, posts }) => {
         break;
       case "blog":
         window.scrollTo(0, calcOffset(BlogRef.current));
+        break;
+      case "contact":
+        window.scrollTo(0, calcOffset(ContactRef.current));
         break;
       default:
         throw "Wrong section";
@@ -111,7 +115,14 @@ const Index: React.SFC<IndexProps> = ({ projects, posts }) => {
         >
           blog
         </Navitem>
-        <Navitem>contact</Navitem>
+        <Navitem
+          onClick={(e) => {
+            e.preventDefault();
+            scrollTo("contact");
+          }}
+        >
+          contact
+        </Navitem>
       </Navbar>
       <Projects>
         <Headline>Projects</Headline>
@@ -135,7 +146,7 @@ const Index: React.SFC<IndexProps> = ({ projects, posts }) => {
             })}
         </BlogContainer>
       </Blog>
-      <Contact>
+      <Contact ref={ContactRef}>
         <Headline>Contact</Headline>
 
         <ContactForm />
@@ -167,8 +178,9 @@ const BlogContainer = styled.div`
 
 const Blog = styled.section`
   margin-top: 50px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
 `;
 
 const Projects = styled.section`

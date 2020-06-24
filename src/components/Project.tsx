@@ -17,8 +17,9 @@ export const Project: React.FC<ProjectProps> = ({ project }) => {
         <CardDescription>{project.description}</CardDescription>
 
         <div>
-          {project?.source && <CardLink href={project.source}>Source</CardLink>}{" "}
-          {project?.live && <CardLink href={project.live}>Link</CardLink>}
+          {project?.source && <CardLink href={project.source}>Source</CardLink>}
+          {project?.source && project?.live && "  /  "}
+          {project?.live && <CardLink href={project.live}>Demo</CardLink>}
         </div>
 
         <CardTags>
