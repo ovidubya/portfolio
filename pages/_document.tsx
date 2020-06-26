@@ -30,8 +30,13 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="en">
         <Head>
+          <meta
+            name="description"
+            content="As a software engineer, I'm interested in helping companies create excellent (reliable, maintainable, scalable) software"
+          />
+
           <link
             href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
             rel="stylesheet"

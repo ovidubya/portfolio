@@ -47,7 +47,9 @@ export const ContactForm: React.SFC<ContactFormProps> = () => {
       if (component.type === "Input") {
         return (
           <div key={index}>
-            <span>{component.name}: </span>
+            <label htmlFor={component.name.toLowerCase()}>
+              {component.name}:{" "}
+            </label>
             {withFields ? (
               <Field
                 name={component.name.toLowerCase()}
@@ -63,7 +65,9 @@ export const ContactForm: React.SFC<ContactFormProps> = () => {
       if (component.type === "Textarea") {
         return (
           <div>
-            <span>{component.name}: </span>
+            <label htmlFor={component.name.toLowerCase()}>
+              {component.name}:{" "}
+            </label>
             {withFields ? (
               <Field name={component.name.toLowerCase()} as={Textarea} />
             ) : (

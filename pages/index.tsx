@@ -94,6 +94,7 @@ const Index: React.SFC<IndexProps> = ({ projects, posts }) => {
             scrollTo("projects");
           }}
           backgroundColor="#27ae60"
+          aria-label="Scroll to projects"
         >
           View Projects
         </Button>
