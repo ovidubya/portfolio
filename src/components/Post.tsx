@@ -2,9 +2,9 @@ import * as React from "react";
 import styled from "styled-components";
 import { PostType } from "../../types/types";
 
-type PostProps = {
+interface PostProps extends React.HTMLAttributes<HTMLDivElement> {
   post: PostType;
-};
+}
 
 export const Post: React.FC<PostProps> = ({ post }) => {
   return (
@@ -18,7 +18,16 @@ export const Post: React.FC<PostProps> = ({ post }) => {
 
         <PostDescriptionText>{post.description}</PostDescriptionText>
 
-        <PostLink href={`/blog/${post.slug}`}>Read more</PostLink>
+        <PostLink
+          onClick={(e) => {
+            if (window.gaa) {
+              window.gaa("blog", "click", post.title);
+            }
+          }}
+          href={`/blog/${post.slug}`}
+        >
+          Read more
+        </PostLink>
       </PostDescription>
     </PostStyled>
   );

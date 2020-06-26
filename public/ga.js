@@ -12,5 +12,7 @@
   ga.l = +new Date();
   ga("create", w.gaIdentifer, "auto");
   ga("send", "pageview");
-  ga("send", "event", "test", "test", "test");
+  w.gaa = function (category, action, label) {
+    ga("send", "event", category, action, label);
+  };
 })(window);
