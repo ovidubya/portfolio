@@ -36,7 +36,33 @@ class MyDocument extends Document {
             name="description"
             content="As a software engineer, I'm interested in helping companies create excellent (reliable, maintainable, scalable) software"
           />
-          <meta name="ketword" content="software, engineer, ovadia, shalom, chicago, nodejs, react, javascript, typescript, node, freelance, java, express, performant"/>
+          <meta
+            name="keywords"
+            content="software, engineer, ovadia, shalom, chicago, nodejs, react, javascript, typescript, node, freelance, java, express, performant"
+          />
+          <meta name="title" content="Ovadia Shalom • Software Engineer" />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://ovadiashalom.me/" />
+          <meta
+            property="og:title"
+            content="Ovadia Shalom • Software Engineer"
+          />
+          <meta
+            property="og:description"
+            content="As a software engineer, I'm interested in helping companies create excellent (reliable, maintainable, scalable) software. "
+          />
+          <meta property="og:image" content="/homepage.png"></meta>
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta property="twitter:url" content="https://ovadiashalom.me/" />
+          <meta
+            property="twitter:title"
+            content="Ovadia Shalom • Software Engineer"
+          />
+          <meta
+            property="twitter:description"
+            content="As a software engineer, I'm interested in helping companies create excellent (reliable, maintainable, scalable) software. "
+          />
+          <meta property="twitter:image" content="/homepage.png" />
 
           <link
             href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
