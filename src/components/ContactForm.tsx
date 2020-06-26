@@ -53,11 +53,16 @@ export const ContactForm: React.SFC<ContactFormProps> = () => {
             {withFields ? (
               <Field
                 name={component.name.toLowerCase()}
-                {...component.props}
                 as={Input}
+                id={component.name.toLowerCase()}
+                {...component.props}
               />
             ) : (
-              <Input name={component.name.toLowerCase()} {...component.props} />
+              <Input
+                id={component.name.toLowerCase()}
+                name={component.name.toLowerCase()}
+                {...component.props}
+              />
             )}
           </div>
         );
@@ -69,9 +74,16 @@ export const ContactForm: React.SFC<ContactFormProps> = () => {
               {component.name}:{" "}
             </label>
             {withFields ? (
-              <Field name={component.name.toLowerCase()} as={Textarea} />
+              <Field
+                id={component.name.toLowerCase()}
+                name={component.name.toLowerCase()}
+                as={Textarea}
+              />
             ) : (
-              <Textarea name={component.name.toLowerCase()} />
+              <Textarea
+                id={component.name.toLowerCase()}
+                name={component.name.toLowerCase()}
+              />
             )}
           </div>
         );

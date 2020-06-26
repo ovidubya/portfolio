@@ -14,6 +14,7 @@ export const ToggleTheme: React.FC<ToggleThemeProps> = ({
 }) => {
   return (
     <ThemeIcon
+      aria-label="Toggle Light and Dark Theme"
       onClick={() => {
         toggleTheme();
       }}
