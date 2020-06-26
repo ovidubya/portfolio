@@ -42,11 +42,11 @@ class MyDocument extends Document {
           />
           <link rel="icon" type="image/png" href="/Untitled16.png" />
 
+          <script src="/ga.js"></script>
           <script
             async
-            src="https://www.googletagmanager.com/gtag/js?id=UA-170761872-1"
+            src="https://www.google-analytics.com/analytics.js"
           ></script>
-          <script src="/ga.js"></script>
         </Head>
         <body>
           <Main />
