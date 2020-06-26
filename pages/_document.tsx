@@ -36,6 +36,7 @@ class MyDocument extends Document {
             name="description"
             content="As a software engineer, I'm interested in helping companies create excellent (reliable, maintainable, scalable) software"
           />
+          <meta name="ketword" content="software, engineer, ovadia, shalom, chicago, nodejs, react, javascript, typescript, node, freelance, java, express, performant"/>
 
           <link
             href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
