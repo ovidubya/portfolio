@@ -74,7 +74,7 @@ class MyDocument extends Document {
           />
           <link rel="icon" type="image/png" href="/Untitled16.png" />
 
-          <script src="/ga.js"></script>
+          <script src="/script.js"></script>
           <script
             async
             src="https://www.google-analytics.com/analytics.js"
