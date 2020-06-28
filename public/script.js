@@ -21,7 +21,7 @@
 (function (w) {
   function sendToSlack(text) {
     return fetch(
-      "https://hooks.slack.com/services/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",
+      "https://hooks.slack.com/services/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",
       {
         method: "POST",
         headers: {},
