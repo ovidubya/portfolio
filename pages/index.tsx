@@ -201,14 +201,6 @@ const ProjectsContainer = styled.div<{ numberOfProjects: number }>`
       grid-template-columns: 1fr 1fr;
       grid-template-rows: auto;
     }
-    ${(props) =>
-      props.numberOfProjects === 5 &&
-      css`
-        & > :nth-of-type(3) {
-          grid-row: 2;
-          grid-column: 1 / 3;
-        }
-      `}
   }
 `;
 

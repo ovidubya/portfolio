@@ -1,5 +1,20 @@
 [
     {
+        "catagory": "Javascript, Node",
+        "title": "create-react-styled-library",
+        "description": "Open source CLI that will allow you too bootstrap a react styled component library. Zero configuration Rollup for bundling and ready to go Storybook for documentation plus more with 1 just command",
+        "source": "https://github.com/ovidubya/create-react-styled-library",
+        "live": "https://www.npmjs.com/package/create-react-styled-library",
+        "tags": "React, styled-components, CLI, NodeJS, Automation"
+    },
+    {
+        "catagory": "React Native",
+        "title": "OfferupDeals App",
+        "description": "An Android/iOS application backed by an Express server that will automatically notify you by push notications if any items were posted on the offical Offerup Website matching your desired filters. ",
+        "source": "https://github.com/ovidubya/offerup-deals-server",
+        "tags": "React Native, React, Expo, Express, Push Notifcations, Playwright"
+    },
+    {
         "catagory": "React",
         "title": "Chess Stats",
         "description": "A simple web app that will compare my Chess.com stats to the Hikaru Nakamura, a world chess champion.",
@@ -14,13 +29,6 @@
         "live": "https://another-js-quiz-app.netlify.app/",
         "source": "https://github.com/ovidubya/quiz-app",
         "tags": "React, styled-components"
-    },
-    {
-        "catagory": "React Native",
-        "title": "OfferupDeals App",
-        "description": "An Android/iOS application backed by an Express server that will automatically notify you by push notications if any items were posted on the offical Offerup Website matching your desired filters. This app is more useful than the exisitng push notifcation logic in the current Offerup since this will take into account the users verfication status / year joined / rating / and distance from your current location. Read more on how you can use it to save money here: ",
-        "source": "https://github.com/ovidubya/offerup-deals-server",
-        "tags": "React Native, React, Expo, Express, Push Notifcations, Playwright"
     },
     {
         "catagory": "Chrome API",
