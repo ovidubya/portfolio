@@ -22,10 +22,7 @@ export const Footer: React.SFC<FooterProps> = () => {
             Github
           </a>{" "}
           /{" "}
-          <a
-            target="_blank"
-            href="https://www.linkedin.com/in/ovadia-shalom-b52190b9/"
-          >
+          <a href="https://www.linkedin.com/in/ovadia-shalom-b52190b9/">
             Linkedin
           </a>
         </div>
