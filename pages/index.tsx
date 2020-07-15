@@ -218,6 +218,7 @@ const AboutMeContainer = styled.section`
 `;
 
 const IntroductionText = styled.p`
+  font-family: "Raleway", sans-serif;
   color: ${(props) => props.theme.colors.text};
   font-size: ${(props) => props.theme.font.extraLarge};
 `;

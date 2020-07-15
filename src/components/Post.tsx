@@ -42,9 +42,12 @@ const PostLink = styled.a`
 const PostStyled = styled.div`
   display: flex;
   flex-direction: column;
-  /* border-bottom: 1px solid #666; */
+  font-family: "Raleway", sans-serif;
   margin: 20px;
   padding-bottom: 20px;
+  :not(:last-child) {
+    border-bottom: 1px solid #666;
+  }
 
   @media screen and (min-width: 768px) {
     flex-direction: row;

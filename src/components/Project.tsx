@@ -33,6 +33,7 @@ export const Project: React.FC<ProjectProps> = ({ project }) => {
 };
 
 const Card = styled.div`
+  font-family: "Raleway", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;

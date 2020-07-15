@@ -7,7 +7,7 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Raleway', sans-serif;
+    /* font-family: 'Raleway', sans-serif; */
   }
   html {
     scroll-behavior: smooth;
@@ -25,6 +25,7 @@ export const GlobalStyles = createGlobalStyle`
   code {
     font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New!important;
   }
+  
   p {
     font-family: 'PT Serif', serif;
   }

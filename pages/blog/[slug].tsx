@@ -35,7 +35,7 @@ const Blog: React.SFC<BlogProps> = ({ slug }) => {
 
 const BlogContainer = styled.section`
   margin: 80px 20px;
-  max-width: 968px;
+  max-width: 680px;
   ${Button} {
     margin-bottom: 10px;
   }

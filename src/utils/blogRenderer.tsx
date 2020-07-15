@@ -1,14 +1,28 @@
 import styled, { useTheme } from "styled-components";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import {
-  atomOneLight,
-  atomOneDark,
-  monokaiSublime,
-} from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import { vs2015, xcode } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 
 export const rendererEngine = {
   image: function (props) {
     return <StyledImage {...props}></StyledImage>;
+  },
+  heading: function ({ children, ...props }) {
+    switch (props.level) {
+      case 1:
+        return <HeaderOne {...props}>{children}</HeaderOne>;
+      case 2:
+        return <h2 {...props}>{children}</h2>;
+      case 3:
+        return <h3 {...props}>{children}</h3>;
+      case 4:
+        return <h4 {...props}>{children}</h4>;
+      case 5:
+        return <h5 {...props}>{children}</h5>;
+      case 6:
+        return <h6 {...props}>{children}</h6>;
+      default:
+        throw "unable to render markdown";
+    }
   },
   link: function ({ children, ...props }) {
     return (
@@ -25,29 +39,49 @@ export const rendererEngine = {
     }
   },
   blockquote: function ({ children, ...props }) {
+    console.log("count");
     return <StyledBlockquote {...props}>{children}</StyledBlockquote>;
   },
   paragraph: function ({ children, ...props }) {
     return <StyledParagraph {...props}>{children}</StyledParagraph>;
   },
   code: function ({ language, value }) {
+    console.log(language);
     const theme = useTheme();
     return (
       <StyledSyntaxHighlighter
-        style={theme.themeType === "dark" ? atomOneLight : monokaiSublime}
+        style={theme.themeType === "dark" ? xcode : vs2015}
         language={language}
       >
         {value}
       </StyledSyntaxHighlighter>
     );
   },
+  inlineCode: function ({ children }) {
+    return <StyledCode>{children}</StyledCode>;
+  },
 };
 
+const StyledCode = styled.code`
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(27, 31, 35, 0.05);
+  border-radius: 6px;
+`;
+
+const HeaderOne = styled.h1`
+  font-size: 2rem;
+  font-family: "PT Serif", serif;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  margin: 20px 0;
+`;
 const StyledSyntaxHighlighter = styled(SyntaxHighlighter)`
   margin: 25px 0;
   font-size: ${(props) => props.theme.font.small};
   @media screen and (min-width: 768px) {
-    font-size: ${(props) => props.theme.font.medium};
+    font-size: ${(props) => props.theme.font.small};
   }
 `;
 

@@ -1,7 +1,7 @@
 ---
 title: How I created an API from Offerup to beat Scammers
 description: It's no secret that everyone wants to get the best deal when they buy stuff. But how do we know if we are getting scammed and wasting our time?
-category: Project
+category: React Native
 date: 6/22/2020
 ---
 

@@ -69,7 +69,7 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap"
+            href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap"
             rel="stylesheet"
           />
           <link rel="icon" type="image/png" href="/Untitled16.png" />
