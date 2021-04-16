@@ -1,5 +1,13 @@
 [
     {
+        "catagory": "API Testing",
+        "title": "Testiny",
+        "description": "Testiny is a API testing tool for any language. It checks a single JS config file and parses to generate tests. Every generate will run and produce either a sucess or an error.",
+        "source": "https://github.com/ovidubya/testiny",
+        "live": "https://www.npmjs.com/package/testiny",
+        "tags": "CLI, NodeJS, Testing, API, Declartive"
+    },
+    {
         "catagory": "Javascript, Node",
         "title": "create-react-styled-library",
         "description": "Open source CLI that will allow you too bootstrap a react styled component library. Zero configuration Rollup for bundling and ready to go Storybook for documentation plus more with 1 just command",
@@ -16,32 +24,10 @@
     },
     {
         "catagory": "React",
-        "title": "Chess Stats",
-        "description": "A simple web app that will compare my Chess.com stats to the Hikaru Nakamura, a world chess champion.",
-        "source": "https://github.com/ovidubya/chess-compare",
-        "live": "https://chess-compare.netlify.app/",
-        "tags": "React, styled-components, Chess API, React Spring"
-    },
-    {
-        "catagory": "React",
         "title": "Quiz App",
         "description": "Another one of those quiz apps to test you knowledge on JS and CSS in the theme of Who Wants to Be a Millionaire",
         "live": "https://another-js-quiz-app.netlify.app/",
         "source": "https://github.com/ovidubya/quiz-app",
         "tags": "React, styled-components"
-    },
-    {
-        "catagory": "Chrome API",
-        "title": "Chrome Debugger",
-        "description": "Chrome extention that will allow clients to debug their OpinionLab Widgets on productions sites. It uses to the Chrome API to hook into the chrome's tab background and listen for http requests with Opinonlab Resources. Once it finds a resource, it will run a Regex to determine the contents of the file",
-        "source": "https://github.com/ovidubya/OOoChromExtension",
-        "tags": "HTML, CSS, MaterializeCSS, jQuery, Chrome API"
-    },
-    {
-        "catagory": "Node, Express",
-        "title": "Smart Meter (IoT Device)",
-        "description": "AT&T Launched a new network 2018 called NB-IoT which allows IoT devices to communicate without the overhead of a regualr LTE network. Part of the capstone project was to use this Network to simualte meter reading using a resource constrained device (BG96) and collect the data to a Database and display with a Web application",
-        "source": "https://github.com/TheJordanWine/Interop-Cellular-IoT",
-        "tags": "C, C++, OS-IoT Lib, Node, Express, Mongo, Webdriver.IO"
     }
 ]
